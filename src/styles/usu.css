@@ -1,0 +1,108 @@
+#backgroundImageContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/img/logo.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#adoptTextContainer {
+    position: absolute;
+    top: 8%; /* Posicionado un 5% más arriba */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: calc(50%);
+}
+
+#adoptText {
+    color: #fff;
+    font-size: 48px;
+}
+
+#userContainer {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border: 1px solid #999;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#userTitle {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cerrarSesionBtn {
+    background-color: #efebeb;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#cerrarSesionBtn:hover {
+    background-color: #c0baba;
+}
+
+.cat-container, .cat-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 50px; /* Aumentado para incrementar la altura */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    border: 2px solid white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cat-container:hover, .cat-info:hover {
+    opacity: 1;
+}
+
+.cat-image {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
+}
+
+.cat-image:hover {
+    transform: scale(1.9); /* Aumenta el tamaño en un 10% al pasar el cursor */
+}
+
+.cat-info h2 {
+    margin-bottom: 45px; /* Aumentado para más espacio entre el nombre y la descripción */
+}
+
+.adopt-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.adopt-button:hover {
+    background-color: #4569a0;
+}

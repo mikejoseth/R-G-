@@ -1,0 +1,203 @@
+.completed-task-text {
+    font-size: 20px;
+    color: white;
+  }
+  
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+  
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Contenedor Principal */
+#welcomeAdminContainer {
+    position: absolute;
+    top: 10%; /* Modificado para mover 20% más arriba */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Aumentado del 50% original a 55% */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    border-radius: 0;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out, makeInvisible 3s linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes makeInvisible {
+    0% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+/* Texto de Bienvenida */
+#welcomeAdminText {
+    color: #fff;
+    font-size: 48px;
+    text-align: center;
+    font-family: Algerian, sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: blink 2s infinite, changeColor 4s linear;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: #007bff;
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+/* Estilos para Botones */
+.button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos del Formulario */
+.task-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.task-input:focus {
+    border-color: #007bff;
+}
+
+.task-button {
+    background-color: #28a745;
+    margin-right: 10px; /* Espacio entre los botones */
+}
+
+.task-button:hover {
+    background-color: #218838;
+}
+
+/* Lista de Tareas */
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item.completada {
+    background-color: #f5f6f5;
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.task-edit-btn,
+.task-delete-btn {
+    background-color: #6435dc; /* Color por defecto */
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Espacio entre los botones */
+}
+
+.task-edit-btn {
+    background-color: #073dff; /* Color único para el botón de editar */
+}
+
+.task-delete-btn {
+    background-color: #dc3545; /* Color único para el botón de eliminar */
+}
+
+.task-edit-btn:hover,
+.task-delete-btn:hover {
+    opacity: 0.8;
+}
+
+/* Contenedor de Tareas Completadas */
+.completed-tasks-container {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.completed-task-item {
+    background-color: hsla(257, 77%, 29%, 0.026);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.completed-task-item:hover {
+    background-color: #aeafd2;
+}

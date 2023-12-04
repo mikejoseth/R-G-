@@ -1,0 +1,179 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../img/fondo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-container {
+    text-align: center;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-right: 70px;
+}
+
+.form-container h1,
+.text-container h1.main-title,
+#rescatandoGarritas {
+    color: #fff;
+    margin-bottom: 40px;
+    font-family: 'Amasis MT Pro Black', 'Arial', sans-serif;
+    font-size: 250%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input,
+select {
+    margin-bottom: 16px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="email"],
+input[type="password"] {
+    font-family: 'Arial', sans-serif;
+}
+
+input[type="submit"],
+button {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+}
+
+.social-icons svg {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons svg:hover {
+    transform: scale(1.2);
+}
+
+#box {
+    position: absolute;
+    top: 47%;
+    left: 10%;
+}
+
+.text-container {
+    display: none;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 390px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    color: #777;
+    opacity: 0;
+    transition: top 0.3s ease, opacity 0.5s ease, color 0.3s ease, font-size 0.3s ease, width 0.3s ease;
+}
+
+.text-container:hover {
+    top: 50%;
+    color: #fff;
+    font-size: 107%;
+    width: 409.5px;
+}
+
+.text-container.show {
+    display: block;
+    top: 55%;
+    opacity: 1;
+    width: 700px;
+}
+
+.text-container p,
+.text-container h2 {
+    color: #fff;
+    width: 640px;
+}
+
+.text-container p:hover,
+.text-container h2:hover {
+    font-size: 107%;
+}
+
+.quote-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.quote-list li::before {
+    content: '\2022';
+    color: #f3f0f0;
+    margin-right: 5px;
+}
+
+.title-container {
+    position: absolute;
+    top: 100px;
+    left: 180px;
+    color: white;
+    font-size: 400%;
+    text-align: left;
+}
+
+/* Estilos específicos para el título "Rescatando Garritas" */
+#rescatandoGarritas {
+    color: #fff;
+    font-size: 90%;
+    position: relative; /* Añade posición relativa */
+    top: -20px; /* Ajusta la posición vertical según sea necesario */
+    font-family: 'Algerian', 'Arial', sans-serif; /* Aplica la tipografía Algerian */
+}
+
+.title-container {
+    position: absolute;
+    top: 0px; /* Ajusta la posición vertical del contenedor del título */
+    left: 190px;
+    color: white;
+    font-size: 400%;
+    text-align: left;
+}
+
+.title-container h2 {
+    color: rgb(243, 234, 234);
+    font-size: 130%;
+}
+
+.title-container img {
+    max-width: 100px;
+}
